@@ -1,0 +1,58 @@
+:root {
+    --dark: #001747;
+    --grey: #b1bacb;
+    --grey-border: rgba(210, 210, 210, 0.75);
+    --grey-light: #eeeeee;
+    --grey-dark: $405175;
+    --blue: #2d70fd;
+    --green: #00d8a7;
+    --white: #ffffff;
+    --gradient: linear-gradient(
+        180deg,
+        rgba(45, 112, 1253, 0.73) 0%,
+        #163e92 100%
+      ); 
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: var(--gradient);
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        margin: 20px 0;
+    }
+
+    h2{
+        margin: 20px 0;
+    }
+
+    .calendar {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 10px;
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .day {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2d70fd;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        transition: background-color 0.3s;
+    }
+
+    .day:hover {
+        background-color: #163e92;
+    }

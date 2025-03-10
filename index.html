@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylecalendar.css">
+    <title>Calendar</title>
+</head>
+<body>
+    <h1>Select a Day</h1>
+    <h2>January</h2>
+    <div class="calendar">
+        <!-- Days 1-31 dynamically generated -->
+    </div>
+
+    <script>
+        const calendar = document.querySelector('.calendar');
+
+        // Generate days dynamically
+        for (let day = 1; day <= 31; day++) {
+            const dayDiv = document.createElement('div');
+            dayDiv.classList.add('day');
+            dayDiv.textContent = day;
+
+            // Redirect to specific to-do list
+            dayDiv.addEventListener('click', () => {
+                window.location.href = `./todo.html?day=${day}`; // Pass day as query parameter
+            });
+
+            calendar.appendChild(dayDiv);
+        }
+    </script>
+</body>
+</html>
